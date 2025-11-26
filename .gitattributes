@@ -1,0 +1,16 @@
+* text=auto
+
+# Arquivos Linux devem usar LF
+*.sh text eol=lf
+*.conf text eol=lf
+*.Dockerfile text eol=lf
+Dockerfile text eol=lf
+
+# Arquivos de código PHP também em LF
+*.php text eol=lf
+
+# Arquivos JS/JSON/CSS/Vue em LF
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.vue text eol=lf
