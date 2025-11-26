@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd /var/www/html
 
@@ -7,6 +7,11 @@ if [ ! -d "vendor" ]; then
     echo "📦 Instalando dependências..."
     composer install
 fi
+
+chown -R www-data:www-data /var/www/html/storage
+chown -R www-data:www-data /var/www/html/bootstrap/cache
+chmod -R 775 /var/www/html/storage
+chmod -R 775 /var/www/html/bootstrap/cache
 
 echo "🔑 Gerando APP_KEY..."
 php artisan key:generate --force
